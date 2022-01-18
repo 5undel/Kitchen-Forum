@@ -73,7 +73,6 @@ def home(request):
     return render(request, 'base/home.html', context)
 
 
-
 def room(request, pk):
     room = Room.objects.get(id=pk)
     roommessages = room.message_set.all().order_by('-created')
