@@ -50,7 +50,7 @@ def registerPage(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
-            user.save
+            user.save()
             login(request, user)
             return redirect('home')
         else:
@@ -75,8 +75,8 @@ def home(request):
 
 def room(request, pk):
     room = Room.objects.get(id=pk)
-
-    context = {'room': room}
+    roommessages = room.message_set.all().order_by('-created')
+    context = {'room': room, 'roommessages': roommessages,}
     return render(request, 'base/room.html', context)
 
 @login_required(login_url='login')
