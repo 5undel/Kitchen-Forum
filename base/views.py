@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    return
+    return render(request, 'home.html')
 
 def room(request):
-    return
+    return render(request, 'room.html')
