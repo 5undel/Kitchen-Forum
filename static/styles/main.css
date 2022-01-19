@@ -1,0 +1,16 @@
+
+
+ .home-wrapper{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.userpage-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.room-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
