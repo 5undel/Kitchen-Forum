@@ -30,6 +30,7 @@
 
             {% for message in roommessages %}
             <div>
+                <a href="{% url 'delete-message' message.id %}">delete</a>
                 <small>@{{message.user}}  {{message.created|timesince}} ago</small>
                 <p>{{ message.body }}</p>
                 <hr>
