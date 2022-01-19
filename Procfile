@@ -1,1 +1,1 @@
-web: gunicorn kitchen-forum.wsgi
+web: gunicorn kitchenforum.wsgi
