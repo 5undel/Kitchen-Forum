@@ -7,13 +7,12 @@
 <h1>Forums</h1>
 
 <div class="home-wrapper">
-    <div>
+    <div class="create-room-wrapper">
         <a href="{% url 'create-room' %}">Create Room</a>
     </div>
-
     <div>
         {% for room in rooms %}
-            <div>
+            <div class="feed-wrapper">
                 <small>{{ room.topic.name }}</small>
                 <br>
                 <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
@@ -21,11 +20,11 @@
                 <br>
                 <a href="{% url 'update-room' room.id %}">Edit</a>
                 <a href="{% url 'delete-room' room.id %}">Delete</a>
-                <hr>
+                
             </div>
         {% endfor %}
     </div>
-    <div>
+    <div class="topic-wrapper">
         <h3>Topics</h3>   
         <hr> 
         <div>
@@ -36,6 +35,7 @@
                 <a href="{% url 'home'%}?r={{topic.name}}">{{topic.name}}</a>
             </div>
         {% endfor %}
+        
     </div>
 
 </div>
