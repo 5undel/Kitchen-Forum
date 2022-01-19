@@ -8,6 +8,7 @@
     {% else %}
     <a href="{% url 'login' %}">Log in</a>
     {% endif %}
+    
     <form method="GET" action="{% url 'home' %}">
         <input type="text" name="r" placeholder="Search"/>
     </form>

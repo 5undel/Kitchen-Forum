@@ -22,7 +22,7 @@
             <div class="feed-wrapper">
                 <small><a href="{% url 'user-page' message.user.id %}">@{{message.user}}</a>  {{message.created|timesince}} ago</small>
                 <p>{{ message.body }}</p>
-                <a href="{% url 'delete-message' message.id %}">delete</a>
+                <a href="{% url 'delete-message' message.id %}">Delete</a>
                 <hr>
             </div>
             {% endfor %}

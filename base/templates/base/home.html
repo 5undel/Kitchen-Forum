@@ -5,6 +5,22 @@
 
 
 <h1>Forums</h1>
+<div class="mobile-topic"></div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="{% url 'home' %}">All</a>
+                {% for topic in topics%}
+                <div>
+                    <a href="{% url 'home'%}?r={{topic.name}}">{{topic.name}}</a>
+                </div>
+                {% endfor %}
+                
+                <a href="{% url 'create-room' %}">Create Room</a>
+                
+            </div>
+    </div>
+</div>
 
 <div class="home-wrapper">
     <div class="create-room-wrapper">
@@ -39,5 +55,6 @@
     </div>
 
 </div>
+
 
 {% endblock content %}
