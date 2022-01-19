@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div>
+    <div class="delete-wrapper">
         <form action="" method="POST">
             {% csrf_token %}
             <p>Do you want to delete "{{ object }}"?</p>

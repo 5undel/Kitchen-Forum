@@ -7,23 +7,28 @@
 
 <div class="userpage-wrapper">
     <div>
-        <a href="{% url 'create-room' %}">Create Room</a>
+        
 
         {% for room in rooms %}
-            <div>
-                <a href="{% url 'update-room' room.id %}">Edit</a>
-                <a href="{% url 'delete-room' room.id %}">Delete</a>
+            <div class="feed-wrapper">
+                <small>{{ room.topic.name }}</small>
                 <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
                 <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
-                <small>{{ room.topic.name }}</small>
+                <a href="{% url 'update-room' room.id %}">Edit</a>
+                <a href="{% url 'delete-room' room.id %}">Delete</a>
                 <hr>
             </div>
         {% endfor %}
     </div>
     <div>
+        <div>
 
+        </div>
+        <div>
+            <h4>BIO</h4>
+        </div>
     </div>
-    <div>
+    <div class="topic-wrapper">
         <h3>Topics</h3>   
         <hr> 
         <div>
@@ -34,6 +39,8 @@
                 <a href="{% url 'home'%}?r={{topic.name}}">{{topic.name}}</a>
             </div>
         {% endfor %}
+        <br>
+        <a href="{% url 'create-room' %}">Create Room</a>
     </div>
 </div>
 
