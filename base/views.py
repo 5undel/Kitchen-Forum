@@ -93,7 +93,11 @@ def room(request, pk):
 
 def userPage(request,pk):
     user = User.objects.get(id=pk)
-    context = {'user': user}
+    rooms = user.room_set.all()
+    roommessages = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user': user, 'rooms': rooms,
+     'roommessages': roommessages,'topics': topics}
     return render(request, 'base/mypage.html', context)
 
 
