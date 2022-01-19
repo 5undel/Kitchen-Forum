@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["kitchenforum.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["kitchenforum.herokuapp.com", "localhost"] 
 
 
 # Application definition
@@ -133,6 +133,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static/'
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
