@@ -8,6 +8,8 @@ a {
     color: whitesmoke;
 }
 
+
+
 a:hover {
     color: red;
     border-bottom: red solid 1px;
