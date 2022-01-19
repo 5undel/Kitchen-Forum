@@ -15,6 +15,14 @@ This page is created for those who love food and want to discuss with people who
 
 
 ## Deployment
+  #### Local deployment
+   - repo is found here https://github.com/5undel/kitchen-forum
+   - Click the green button "Gitpod"
+   - Lunch the site
+   - In the terminal - pyton manage.py runserver
+   -  click the link the pops up in the right bottom corner 
+   -Or click Ctrl + http://127.0.0.1:8000/
+
   #### Heroku Setup and CLI
    - Create an account with https://id.heroku.com/login
    - Create new Heroku App - App_name & Location = Europe
@@ -29,9 +37,36 @@ This page is created for those who love food and want to discuss with people who
 
 
 ## Test
+- Jigsaw
+![image](image/jigsaw.kitchenforum.png)
+
+- Lighthouse
+![image](image/lighthouse.png)
+
+### WEBBROWSER
+- Chrome
+![image](image/chrome.png)
+- Fierfox
+
+- Edge
+
+
 
 ## Credit
+ - 
+ -
+ -
+
+
+
 
 ## Fix
 
 ## Future plans
+- Add setting to userpage so the user can add BIO, avatar och links
+- Add other users as friends
+
+
+### wireframe
+ - Home page
+  ![image](image/homepage.png)
