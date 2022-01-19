@@ -12,6 +12,11 @@
     <div>
         <h4>Users</h4>
         <hr>
+        {% for user in participants %}
+            <div>
+                <p>@{{ user.username }}</p>
+            </div>
+        {% endfor %}
     </div>
     <div>
         <h1>{{room.name}}</h1>
