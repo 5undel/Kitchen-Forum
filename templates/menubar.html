@@ -2,7 +2,13 @@
     <div class="logo">
         <a href="/"><h1>Kitchen Forum</h1></a>
     </div>
+    {% if request.user.is_authenticated %}
     <p>Hello <a href="{% url 'user-page' user.id %}"> {{ request.user }}</a></p>
+    {% else %}
+    <p> </p>
+    {% endif %}
+    <br>
+    <br>
     {% if request.user.is_authenticated %}
     <a href="{% url 'logout' %}">Log out</a>
     {% else %}

@@ -34,6 +34,9 @@ This page is created for those who love food and want to discuss with people who
    - Click deploy Branch.
    - After depolyd click "Open app" 
 
+   - Click login button
+   - Click the Register button and create a user.
+
 
 
 ## Test
