@@ -19,12 +19,16 @@ class Room(models.Model):
     participants = models.ManyToManyField(User, related_name='participants', blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='room_liks', blank=True)
 
     class Meta:
         ordering = ['-updated', '-created']
 
     def __str__(self):
         return self.name
+    
+    def number_of_liks(self):
+        return self.likes.count()
 
 
 class Message(models.Model):
