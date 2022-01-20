@@ -19,16 +19,16 @@
         
         <div class="comment-container">
             {% for message in roommessages %}
-            <div class="feed-wrapper">
-                <small><a href="{% url 'user-page' message.user.id %}">@ {{message.user}}</a>  {{message.created|timesince}} ago</small>
-                <p>{{ message.body }}</p>
-                <div class="btn-like">
-                    <a href="#"><p>Like</p></a>
-                </div>
-                <br>
-                <a class="delet-btn" href="{% url 'delete-message' message.id %}">Delete</a>
-
-                
+            <div class="zoom">
+                <div class="feed-wrapper">
+                    <small><a href="{% url 'user-page' message.user.id %}">@ {{message.user}}</a>  {{message.created|timesince}} ago</small>
+                    <p>{{ message.body }}</p>
+                    <div class="btn-like">
+                        <a href="#"><p>Like</p></a>
+                    </div>
+                    <br>
+                    <a class="delet-btn" href="{% url 'delete-message' message.id %}">Delete</a>
+                </div>  
             </div>
             {% endfor %}
         </div>

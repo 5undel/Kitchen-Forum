@@ -39,7 +39,7 @@
                         <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
                         <br>
                         <a href="{% url 'update-room' room.id %}">Edit</a>
-                        <a href="{% url 'delete-room' room.id %}">Delete</a>
+                        <a class="delet-btn" href="{% url 'delete-room' room.id %}">Delete</a>
                         <br>
                 </div>
             </div>
