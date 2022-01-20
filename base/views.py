@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -71,8 +72,6 @@ def room(request, pk):
     roommessages = room.message_set.all().order_by('-created')
     participants = room.participants.all()
     topics = Topic.objects.all()
-    likes = room.likes.all()
-    
     if request.method == 'POST':
         message = Message.objects.create(
             user=request.user,
