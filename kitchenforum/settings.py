@@ -85,13 +85,16 @@ WSGI_APPLICATION = 'kitchenforum.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': { 
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': { 
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse('postgres://xgwqsatyzaucdp:fdea7ad3c4ccee57663979b3c3da597aa35bd6ad935ccad68718fc20487046f1@ec2-54-220-223-3.eu-west-1.compute.amazonaws.com:5432/delplim5e7abhi')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
