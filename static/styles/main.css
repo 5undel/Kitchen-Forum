@@ -8,11 +8,14 @@ a {
     color: whitesmoke;
 }
 
-
-
-a:hover {
+.delet-btn:hover {
     color: red;
     border-bottom: red solid 1px;
+} 
+
+a:hover {
+    color: grey;
+    border-bottom: grey solid 1px;
 }
 /*End a links*/
 
@@ -41,12 +44,22 @@ a:hover {
     margin: 10px;
     padding: 5px;
 }
+
 .zoom{
     transition: transform .2s;
 }
 
 .zoom:hover{
     transform: scale(1.01);
+}
+.btn-like{
+    width: 5px;
+    float: right;
+    padding-right: 25px;
+}
+
+.btn-like a:hover {
+    color: green;
 }
 
 .topic-wrapper{
