@@ -21,7 +21,7 @@ This page is created for those who love food and want to discuss with people who
    - Lunch the site
    - In the terminal - pyton manage.py runserver
    -  click the link the pops up in the right bottom corner 
-   -Or click Ctrl + http://127.0.0.1:8000/
+   -Or click Ctrl + http://127.0.0.1:8000/ in the terminal
 
   #### Heroku Setup and CLI
    - Create an account with https://id.heroku.com/login
@@ -46,10 +46,6 @@ This page is created for those who love food and want to discuss with people who
 ### WEBBROWSER
 - Chrome
 ![image](image/chrome.png)
-- Fierfox
-
-- Edge
-
 
 
 ## Credit
