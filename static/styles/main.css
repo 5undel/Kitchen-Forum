@@ -41,6 +41,13 @@ a:hover {
     margin: 10px;
     padding: 5px;
 }
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover{
+    transform: scale(1.01);
+}
 
 .topic-wrapper{
     border: solid #142f46 3px;
@@ -60,7 +67,7 @@ a:hover {
     width: 80%;
     margin: 10px;
     padding: 5px;
-    height: 50px;
+    height: 20px;
 }
 /*End Home page*/
 
