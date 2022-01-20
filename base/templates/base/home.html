@@ -28,6 +28,7 @@
     <div class="create-room-wrapper">
         <a href="{% url 'create-room' %}">Create Room</a>
     </div>
+    <!--Feed -->
     <div>
         {% for room in rooms %}
             <div class="zoom">
@@ -43,6 +44,8 @@
             </div>
         {% endfor %}
     </div>
+    <!--End Feed-->
+    <!--Topic-->
     <div class="topic-wrapper">
         <h3>Topics</h3>   
         <hr> 
@@ -54,9 +57,8 @@
                 <a href="{% url 'home'%}?r={{topic.name}}">{{topic.name}}</a>
             </div>
         {% endfor %}
-        
     </div>
-
+    <!--End Topic-->
 </div>
 
 
