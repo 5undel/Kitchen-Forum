@@ -5,6 +5,7 @@
 
 
 <h1>Forums</h1>
+<!--For the mobile screen-->
 <div class="mobile-topic"></div>
     <div class="dropdown">
         <button class="dropbtn">Menu</button>
@@ -21,6 +22,7 @@
             </div>
     </div>
 </div>
+<!--End the mobile screen-->
 
 <div class="home-wrapper">
     <div class="create-room-wrapper">
@@ -28,15 +30,16 @@
     </div>
     <div>
         {% for room in rooms %}
-            <div class="feed-wrapper">
-                <small>{{ room.topic.name }}</small>
-                <br>
-                <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
-                <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
-                <br>
-                <a href="{% url 'update-room' room.id %}">Edit</a>
-                <a href="{% url 'delete-room' room.id %}">Delete</a>
-                
+            <div class="zoom">
+                <div class="feed-wrapper">
+                        <small>{{ room.topic.name }}</small>
+                        <br>
+                        <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
+                        <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
+                        <br>
+                        <a href="{% url 'update-room' room.id %}">Edit</a>
+                        <a href="{% url 'delete-room' room.id %}">Delete</a>
+                </div>
             </div>
         {% endfor %}
     </div>
