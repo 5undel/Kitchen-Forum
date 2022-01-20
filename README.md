@@ -48,8 +48,16 @@ This page is created for those who love food and want to discuss with people who
 
 ### WEBBROWSER
 - Chrome
+
 ![image](image/chrome.png)
 
+- Edge
+
+![image](image/edge.png)
+
+- Fierfox
+
+![image](image/fierfox.png)
 
 ## Credit
  - 
