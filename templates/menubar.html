@@ -6,9 +6,10 @@
     <p>Hello <a href="{% url 'user-page' user.id %}"> {{ request.user }}</a></p>
     {% else %}
     <p> </p>
+    <br>
+    <br>
     {% endif %}
-    <br>
-    <br>
+
     {% if request.user.is_authenticated %}
     <a href="{% url 'logout' %}">Log out</a>
     {% else %}
