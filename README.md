@@ -8,9 +8,9 @@ This page is created for those who love food and want to discuss with people who
 ## Features
    + Register & login
    + Topics
-   + search bar
+   + Search bar
    + Create room
-   + Comment, delete & edit post
+   + Comment, Delete & Edit post
 
 
 
@@ -30,7 +30,7 @@ This page is created for those who love food and want to discuss with people who
    - Go to Settings Tab, click reveal Config Vars and add DISABLE_COLLECTSTATIC, 1.
    - Go to Deploy - Deployment method and connect to Github
    - Connect to GitHub search for repo-name = kitchen-forum and connect.
-   - Go sown to Manual deploy - Choose a branch to deploy - masterbranch
+   - Go down to Manual deploy - Choose a branch to deploy - main
    - Click deploy Branch.
    - After depolyd click "Open app" 
 
@@ -41,9 +41,11 @@ This page is created for those who love food and want to discuss with people who
 
 ## Test
 - Jigsaw
+
 ![image](image/jigsaw.kitchenforum.png)
 
 - Lighthouse
+
 ![image](image/lighthouse.png)
 
 ### WEBBROWSER
@@ -60,14 +62,10 @@ This page is created for those who love food and want to discuss with people who
 ![image](image/fierfox.png)
 
 ## Credit
- - 
+ - django model tutorial comes from https://docs.djangoproject.com/en/4.0/topics/db/models/
  -
  -
 
-
-
-
-## Fix
 
 ## Future plans
 - Add setting to userpage so the user can add BIO, avatar och links
@@ -76,4 +74,5 @@ This page is created for those who love food and want to discuss with people who
 
 ### wireframe
  - Home page
+
   ![image](image/homepage.png)
