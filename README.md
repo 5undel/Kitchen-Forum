@@ -6,9 +6,18 @@ This page is created for those who love food and want to discuss with people who
 
 
 ## Features
+
+   ![image](image/logins.png)
    + Register & login
+
+   ![image](image/reg.png)
    + Topics
+   
+![image](image/login.png)
    + Search bar
+
+ ![image](image/rooms.png)
+ ![image](image/room.png)
    + Create room
    + Comment, Delete & Edit post
 
@@ -24,19 +33,21 @@ This page is created for those who love food and want to discuss with people who
    -Or click Ctrl + http://127.0.0.1:8000/ in the terminal
 
   #### Heroku Setup and CLI
-   - Create an account with https://id.heroku.com/login
-   - Create new Heroku App - App_name & Location = Europe
-   - Resources Tab, Add-ons, search for  ‘Heroku Postgres’
-   - Go to Settings Tab, click reveal Config Vars and add DISABLE_COLLECTSTATIC, 1.
-   - Go to Deploy - Deployment method and connect to Github
-   - Connect to GitHub search for repo-name = kitchen-forum and connect.
-   - Go down to Manual deploy - Choose a branch to deploy - main
-   - Click deploy Branch.
-   - After depolyd click "Open app" 
 
-   - Click login button
-   - Click the Register button and create a user.
+This project has been deployed to Heroku.
+Steps taken to deploy are as follows:
 
+- Create a **requirements.txt** file using the terminal command `pip3 freeze --local > requirements.txt`
+- Create a **Procfile** with the terminal command `echo web: python3 run.py > Procfile`
+- `git add` and `git commit` the new **requirements** and **Procfile**, then `git push` the project to GitHub.
+
+- Navigate over to Heroku.com
+- Click the "new" button, and give the project a name & set the region to Europe.
+- From the Heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+- Confirm the linking of the Heroku app to the correct GitHub repository.
+- Select "Enable Manual Deployment", and then click the "Deploy" button.
+
+The live link can be found here - https://kitchenforum.herokuapp.com/
 
 
 ## Test
@@ -47,6 +58,11 @@ This page is created for those who love food and want to discuss with people who
 - Lighthouse
 
 ![image](image/lighthouse.png)
+
+- Python (PEP8online.com) 
+
+![image](image/pep8.png)
+
 
 ### WEBBROWSER
 - Chrome
