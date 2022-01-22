@@ -56,15 +56,6 @@ a:hover {
 .zoom:hover{
     transform: scale(1.01);
 }
-.btn-like{
-    width: 5px;
-    float: right;
-    padding-right: 25px;
-}
-
-.btn-like a:hover {
-    color: green;
-}
 
 .topic-wrapper{
     border: solid #142f46 3px;
@@ -181,8 +172,6 @@ a:hover {
     .feed-wrapper, .user-wrapper{
         width: 100%;
     }
-
-
 
     .mobile-topic{
         display: none;
