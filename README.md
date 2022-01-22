@@ -48,6 +48,7 @@ Steps taken to deploy are as follows:
 - Select "Enable Manual Deployment", and then click the "Deploy" button.
 
 The live link can be found here - https://kitchenforum.herokuapp.com/
+ - Click the lgin link at the top left, at the login page click the register link to create a account.  
 
 
 ## Test
