@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -11,7 +11,9 @@ from .models import Room, Topic, Message
 from .forms import RoomForm
 # Create your views here.
 
-#Function for login method
+# Function for login method
+
+
 def loginPage(request):
     page = 'login'
     if request.user.is_authenticated:
@@ -33,12 +35,16 @@ def loginPage(request):
     context = {'page': page}
     return render(request, 'base/reg_login.html', context)
 
-#Function for logout method
+# Function for logout method
+
+
 def logoutUser(request):
     logout(request)
     return redirect('home')
 
-#Function for registration method
+# Function for registration method
+
+
 def registerPage(request):
     form = UserCreationForm()
 
@@ -55,18 +61,22 @@ def registerPage(request):
     return render(request, 'base/reg_login.html', {'form': form})
 
 # Create funtions to get rooms link in home page
+
+
 def home(request):
     r = request.GET.get('r') if request.GET.get('r') != None else ''
     rooms = Room.objects.filter(
         Q(topic__name__icontains=r) |
         Q(name__icontains=r) |
         Q(description__icontains=r)
-        )
+    )
     topics = Topic.objects.all()
     context = {'rooms': rooms, 'topics': topics}
     return render(request, 'base/home.html', context)
 
-#Function in the rooms to se messages, users in the room
+# Function in the rooms to se messages, users in the room
+
+
 def room(request, pk):
     room = Room.objects.get(id=pk)
     roommessages = room.message_set.all().order_by('-created')
@@ -81,20 +91,24 @@ def room(request, pk):
         room.participants.add(request.user)
         return redirect('room', pk=room.id)
     context = {'room': room, 'roommessages': roommessages,
-    'participants': participants, 'topics': topics}
+               'participants': participants, 'topics': topics}
     return render(request, 'base/room.html', context)
 
 # In userpage to see which room they are in
+
+
 def userPage(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     roommessages = user.message_set.all()
     topics = Topic.objects.all()
     context = {'user': user, 'rooms': rooms,
-     'roommessages': roommessages, 'topics': topics}
+               'roommessages': roommessages, 'topics': topics}
     return render(request, 'base/mypage.html', context)
 
 # functions to create room, User have to me login to create it
+
+
 @login_required(login_url='login')
 def createRoom(request):
     form = RoomForm()
@@ -111,6 +125,8 @@ def createRoom(request):
     return render(request, 'base/room_form.html', context)
 
 # functions to update a room, User have to me login to create it
+
+
 @login_required(login_url='login')
 def updateRoom(request, pk):
     room = Room.objects.get(id=pk)
@@ -126,6 +142,8 @@ def updateRoom(request, pk):
     return render(request, 'base/room_form.html', context)
 
 # functions to delete a room, User have to me login to create it
+
+
 @login_required(login_url='login')
 def deleteRoom(request, pk):
     room = Room.objects.get(id=pk)
@@ -137,6 +155,8 @@ def deleteRoom(request, pk):
     return render(request, 'base/delete.html', {'object': room})
 
 # functions to delete a message, User have to me login to create it
+
+
 @login_required(login_url='login')
 def deleteMessage(request, pk):
     message = Message.objects.get(id=pk)
