@@ -33,13 +33,13 @@
         {% for room in rooms %}
             <div class="zoom">
                 <div class="feed-wrapper">
-                        <large>{{ room.topic.name }}</large>
+                        <large class="topic-name">{{ room.topic.name }}</large>
                         <br>
                         <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
-                        <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
+                        <h3><a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
                         <br>
-                        <a href="{% url 'update-room' room.id %}">Edit</a>
-                        <a class="delet-btn" href="{% url 'delete-room' room.id %}">Delete</a>
+                            <a href="{% url 'update-room' room.id %}">Edit</a>
+                            <a class="delet-btn" href="{% url 'delete-room' room.id %}">Delete</a>
                         <br>
                 </div>
             </div>

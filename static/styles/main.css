@@ -49,6 +49,10 @@ a:hover {
     padding: 5px;
 }
 
+.topic-name {
+    font-size: 25px;
+}
+
 .zoom{
     transition: transform .2s;
 }
