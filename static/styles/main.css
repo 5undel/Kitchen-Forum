@@ -1,5 +1,5 @@
 body {
-    background-color: #0e2232;
+    background-color: #2e3336;
     color: whitesmoke;
 }
 /*All a links*/
@@ -77,6 +77,7 @@ a:hover {
     padding: 5px;
     height: 20px;
 }
+
 /*End Home page*/
 
 /*User page*/

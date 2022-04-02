@@ -33,7 +33,7 @@
         {% for room in rooms %}
             <div class="zoom">
                 <div class="feed-wrapper">
-                        <small>{{ room.topic.name }}</small>
+                        <large>{{ room.topic.name }}</large>
                         <br>
                         <a href="{% url 'user-page' room.host.id %}">@{{ room.host.username }}</a>
                         <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
