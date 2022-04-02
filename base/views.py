@@ -12,7 +12,10 @@ from .forms import RoomForm
 # Create your views here.
 
 # Function for login method
+def startpage(request):
 
+    context = {}
+    return render(request, 'base/startpage.html', context)
 
 def loginPage(request):
     page = 'login'

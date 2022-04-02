@@ -1,5 +1,5 @@
 body {
-    background-color: #2e3336;
+    background-color: #353b3f;
     color: whitesmoke;
 }
 /*All a links*/
@@ -29,6 +29,14 @@ a:hover {
     padding-right: 10px;
 }
 /*End Header*/
+
+/* startpage */
+.welcome-text {
+    padding-top: 45px;
+    text-align: center;
+}
+/* end startpage */
+
 
 /*Home page*/
  .home-wrapper{
