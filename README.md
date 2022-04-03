@@ -40,6 +40,10 @@ Steps taken to deploy are as follows:
 - Create a **requirements.txt** file using the terminal command `pip3 freeze --local > requirements.txt`
 - Create a **Procfile** with the terminal command `echo web: python3 run.py > Procfile`
 - `git add` and `git commit` the new **requirements** and **Procfile**, then `git push` the project to GitHub.
+- install **whitenoise**, `pip3 install whitenoise` . Whitenoise will take care of the static file when you deploy the project to heroku.
+after you install whitenoise, you have to freeze the requirements again.
+`pip3 freeze --local > requirements.txt`
+
 
 - Navigate over to Heroku.com
 - Click the "new" button, and give the project a name & set the region to Europe.
@@ -48,7 +52,7 @@ Steps taken to deploy are as follows:
 - Select "Enable Manual Deployment", and then click the "Deploy" button.
 
 The live link can be found here - https://kitchenforum.herokuapp.com/
- - Click the lgin link at the top left, at the login page click the register link to create a account.  
+ - Click the login link at the top left, at the login page click the register link to create a account.  
 
 
 ## Test
@@ -112,3 +116,10 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 ### Program Structur
 
   ![image](image/wireframes/programstructure.PNG)
+
+### Design process
+
+  - contrast grid 
+  ![image](image/wireframes/contrast.PNG)
+
+  - 
