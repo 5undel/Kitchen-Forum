@@ -92,4 +92,23 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 ### wireframe
  - Home page
 
-  ![image](image/homepage.png)
+    ![image](image/wireframes/home.png)
+
+  - Room 
+   ![image](image/wireframes/room.png)
+
+  - Create Room 
+   ![image](image/wireframes/create_room.png)
+  
+  - profile
+   ![image](image/wireframes/profile.png)
+
+  - Login
+   ![image](image/wireframes/login.png)
+  
+  - Register
+   ![image](image/wireframes/register.png)
+
+### Program Structur
+
+  ![image](image/wireframes/programstructure.PNG)
