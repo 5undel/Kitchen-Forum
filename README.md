@@ -84,7 +84,7 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 
 ## Credit
  - django model tutorial comes from https://docs.djangoproject.com/en/4.0/topics/db/models/
- -
+ - front-end color idee [Kitchen and Table](https://kitchenandtable.se/uppsala/)
  -
 
 
@@ -122,4 +122,5 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
   - contrast grid 
   ![image](image/wireframes/contrast.PNG)
 
-  - 
+  - color scheme that I chose for this project, the idea is that it should be soothing and not stand out too much.
+The thought behind it comes after I saw how [Kitchen and table](https://kitchenandtable.se/uppsala/) front-end lookt.
