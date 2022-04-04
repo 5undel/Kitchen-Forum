@@ -1,27 +1,23 @@
 # KitchenForum
-This page is created for those who love food and want to discuss with people who love it just as much.
+This site is for those who love food and want to share with people who love it as well.
 
 ## UX
-- As a first-time user on the page, I want to be able to easily create a user and easily participate in various conversations which interests them.
+- When I first join the site, I want it to be easy to create a user and participate in the various conversations that interest them.
 
+## Functions
+  -Register & Login 
 
-## Features
+ ![image](image/logins.png) 
+ ![image](image/reg.png)
+ 
+  - search bar
 
-   ![image](image/logins.png)
-   + Register & login
+![image](image/login.png) 
 
-   ![image](image/reg.png)
-   + Topics
-   
-![image](image/login.png)
-   + Search bar
+  -  create room + comment, delete and edit post
 
  ![image](image/rooms.png)
- ![image](image/room.png)
-   + Create room
-   + Comment, Delete & Edit post
-
-
+ ![image](image/room.png) 
 
 ## Deployment
   #### Local deployment
@@ -37,12 +33,12 @@ This page is created for those who love food and want to discuss with people who
 This project has been deployed to Heroku.
 Steps taken to deploy are as follows:
 
-- Create a **requirements.txt** file using the terminal command `pip3 freeze --local > requirements.txt`
-- Create a **Procfile** with the terminal command `echo web: python3 run.py > Procfile`
-- `git add` and `git commit` the new **requirements** and **Procfile**, then `git push` the project to GitHub.
-- install **whitenoise**, `pip3 install whitenoise` . Whitenoise will take care of the static file when you deploy the project to heroku.
+- Create a **requirements.txt** file using the terminal command 'pip3 freeze --local > requirements.txt'
+- Create a **Procfile** with the terminal command 'echo web: python3 run.py > Procfile'
+- 'git add' and 'git commit' the new **requirements** and **Procfile**, then 'git push' the project to GitHub.
+- install **whitenoise**, 'pip3 install whitenoise' . Whitenoise will take care of the static file when you deploy the project to heroku.
 after you install whitenoise, you have to freeze the requirements again.
-`pip3 freeze --local > requirements.txt`
+'pip3 freeze --local > requirements.txt'
 
 
 - Navigate over to Heroku.com
@@ -56,7 +52,7 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 
 
 ## Test
-- Jigsaw
+- Puzzle game
 
 ![image](image/jigsaw.kitchenforum.png)
 
@@ -68,13 +64,12 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 
 ![image](image/pep8.png)
 
-
 ### WEBBROWSER
-- Chrome
+- chrome
 
 ![image](image/chrome.png)
 
-- Edge
+- edge
 
 ![image](image/edge.png)
 
@@ -82,45 +77,28 @@ The live link can be found here - https://kitchenforum.herokuapp.com/
 
 ![image](image/fierfox.png)
 
-## Credit
- - django model tutorial comes from https://docs.djangoproject.com/en/4.0/topics/db/models/
- - front-end color idee [Kitchen and Table](https://kitchenandtable.se/uppsala/)
+## credit
+ - django model tutorial is from https://docs.djangoproject.com/en/4.0/topics/db/models/
+ - Front-end color idea [kitchen and table](https://kitchenandtable.se/uppsala/)
  -
 
-
-## Future plans
-- Add setting to userpage so the user can add BIO, avatar och links
+## future plans
+- Add settings to user page so user can add BIO, avatar and links
 - Add other users as friends
 
+### Wireframe
+ - Home page ![image](image/wireframes/home.png)
+ - Room ![image](image/wireframes/room.png)
+ - Create room ![image](image/wireframes/create_room.png)
+ - profile ![image](image/wireframes/profile.png)
+ - Login ![image](image/wireframes/login.png)
+ - register ![image](image/wireframes/register.png)
 
-### wireframe
- - Home page
+### Program structure 
+![image](image/wireframes/programstructure.PNG)
 
-    ![image](image/wireframes/home.png)
-
-  - Room 
-   ![image](image/wireframes/room.png)
-
-  - Create Room 
-   ![image](image/wireframes/create_room.png)
-  
-  - profile
-   ![image](image/wireframes/profile.png)
-
-  - Login
-   ![image](image/wireframes/login.png)
-  
-  - Register
-   ![image](image/wireframes/register.png)
-
-### Program Structur
-
-  ![image](image/wireframes/programstructure.PNG)
-
-### Design process
-
-  - contrast grid 
-  ![image](image/wireframes/contrast.PNG)
-
-  - color scheme that I chose for this project, the idea is that it should be soothing and not stand out too much.
-The thought behind it comes after I saw how [Kitchen and table](https://kitchenandtable.se/uppsala/) front-end lookt.
+### Design process - Contrast grid 
+- The color scheme I chose for this 
+![image](image/wireframes/contrast.PNG)
+ project was meant to be calming and not too prominent.
+The thought behind it came to me after seeing what the front end of [kitchen and table](https://kitchenandtable.se/uppsala/) looked like.
