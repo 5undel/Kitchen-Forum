@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from .models import Room, Topic, Message
-from .forms import RoomForm
+from .forms import RoomForm, TopicRoom
 # Create your views here.
 
 # Function for login method
@@ -109,7 +109,7 @@ def userPage(request, pk):
                'roommessages': roommessages, 'topics': topics}
     return render(request, 'base/mypage.html', context)
 
-# functions to create room, User have to me login to create it
+# functions to create room, User have to be login to create it
 
 
 @login_required(login_url='login')
@@ -126,6 +126,23 @@ def createRoom(request):
 
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
+
+
+# functions to create topic, User have to be login to create it
+@login_required(login_url='login')
+def createTopic(request):
+    form = TopicRoom()
+
+    if request.method == 'POST':
+        form = TopicRoom(request.POST)
+        if form.is_valid():
+            room = form.save(commit=False)
+            room.host = request.user
+            room.save()
+            return redirect('home')
+
+    context = {'form': form}
+    return render(request, 'base/topic_form.html', context)
 
 # functions to update a room, User have to me login to create it
 

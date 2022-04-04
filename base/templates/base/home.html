@@ -17,7 +17,9 @@
                 </div>
                 {% endfor %}
                 
+                <a href="{% url 'topic-room' %}">Create topic</a>
                 <a href="{% url 'create-room' %}">Create Room</a>
+                <br>
                 
             </div>
     </div>
@@ -26,7 +28,13 @@
 
 <div class="home-wrapper">
     <div class="create-room-wrapper">
-        <a href="{% url 'create-room' %}">Create Room</a>
+        <div>
+            <a href="{% url 'topic-room' %}">Create Topic</a>   
+        </div>
+        <div>
+            <a href="{% url 'create-room' %}">Create Room</a>
+        </div>
+        <br>
     </div>
     <!--Feed -->
     <div class="feed-container">
